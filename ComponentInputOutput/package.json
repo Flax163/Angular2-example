@@ -1,5 +1,5 @@
 {
-  "name": "angular2-multi-component",
+  "name": "angular2-component-input-output-example",
   "version": "1.0.0",
   "description": "Example component imput and output in Angular 2",
   "scripts": {
