@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component.ts";
 import { LibraryModule } from "./library/library.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { UserDashboardModule } from "./userdashboard/user.dashboard.module";
+import { AdministratorModule } from "./administrator/administrator.module";
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule, LibraryModule, UserDashboardModule],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, LibraryModule, UserDashboardModule, AdministratorModule],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
