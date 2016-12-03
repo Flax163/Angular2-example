@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { LibraryComponent } from "./library.component";
 import { DetailBookComponent } from "./component/detailbook/detail.book.component.ts";
 import { HomeLibraryComponent } from "./component/homelibrary/home.library.component";
+import { ListBookComponent } from "./component/listbook/list.book.component";
 
 const libraryRoutes:Routes = [
     {
@@ -10,7 +11,10 @@ const libraryRoutes:Routes = [
     {
         path: 'library', component: LibraryComponent, children: [
         {
-            path: ':id', component: DetailBookComponent
+            path: 'book/:id', component: DetailBookComponent
+        },
+        {
+            path: 'book', component: ListBookComponent,
         },
         {
             path: '', component: HomeLibraryComponent
