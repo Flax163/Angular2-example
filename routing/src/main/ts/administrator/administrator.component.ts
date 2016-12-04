@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector:"administrator",
+    selector:"admin",
     templateUrl: "administrator.component.html"
 })
 export class AdministratorComponent {
