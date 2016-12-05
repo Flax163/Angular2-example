@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { AdministratorRoutingModule } from "./administrator-routing.module";
 import { AdministratorComponent } from "./administrator.component";
 import {LoginComponent} from "./component/login/login.component";
-import {AuthService} from "./service/auth.service";
+import {AuthService} from "../service/auth.service";
 
 @NgModule({
     imports: [CommonModule, FormsModule, AdministratorRoutingModule],

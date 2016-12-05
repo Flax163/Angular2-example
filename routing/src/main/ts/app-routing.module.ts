@@ -1,11 +1,15 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, PreloadAllModules, Routes } from "@angular/router";
 
-const appRoutes: Routes = [];
+const appRoutes: Routes = [
+    {path: "", loadChildren: "./library/library.module#LibraryModule"},
+    {path: "admin", loadChildren: "./administrator/administrator.module#AdministratorModule"},
+    {path: "userdashboard", loadChildren: "./userdashboard/user.dashboard.module#UserDashboardModule"},
+];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, {useHash: true })
+        RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules, useHash: true })
     ],
     exports: [
         RouterModule

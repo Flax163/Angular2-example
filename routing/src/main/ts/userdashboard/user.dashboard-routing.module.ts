@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { UserDashboardComponent } from "./user.dashboard.component.ts";
 
 const userDashboardRoutes:Routes = [
-    { path: 'userDashboard',  component: UserDashboardComponent },
+    { path: '',  component: UserDashboardComponent },
 ];
 
 @NgModule({

@@ -4,6 +4,7 @@ import { LibraryComponent } from "./library.component";
 import { DetailBookComponent } from "./component/detailbook/detail.book.component.ts";
 import { HomeLibraryComponent } from "./component/homelibrary/home.library.component";
 import { ListBookComponent } from "./component/listbook/list.book.component";
+import { CanDeactivateGuard } from "../service/can-deactivate-guard.service"
 
 const libraryRoutes:Routes = [
     {
@@ -17,7 +18,7 @@ const libraryRoutes:Routes = [
             path: 'book', component: ListBookComponent,
         },
         {
-            path: '', component: HomeLibraryComponent
+            path: '', component: HomeLibraryComponent, canDeactivate: [CanDeactivateGuard]
         }
     ]
     },
