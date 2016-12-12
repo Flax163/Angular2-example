@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component.ts';
-import { ChildComponent } from "./app/component/child/child.component";
 import { BookService } from "./app/service/book.service";
-import { RootComponent } from "./app/component/root/root.component";
+import { LibraryComponent } from "./app/component/library/library.component";
+import { ListBookComponent } from "./app/component/listbook/list.book.component";
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [AppComponent, RootComponent, ChildComponent],
+    declarations: [AppComponent, LibraryComponent, ListBookComponent],
     providers: [BookService],
     bootstrap: [AppComponent]
 })
