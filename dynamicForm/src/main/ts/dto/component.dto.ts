@@ -1,3 +1,3 @@
 export class ComponentDto {
-    public id:number;
+    constructor(public id:number){}
 }

@@ -1,3 +1,8 @@
 <div [formGroup]="form">
-
+    <div [ngSwitch]="component.id">
+        <input *ngSwitchCase="1" text="text">
+        <select *ngSwitchCase="2">
+            <option>selection</option>
+        </select>
+    </div>
 </div>

@@ -1,15 +1,20 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { FormGroup, FormControl } from "@angular/forms";
+import {ComponentDto} from "../dto/component.dto";
 
 @Component({
     selector: "dynamic-from",
-    templateUrl: ""
+    templateUrl: "dynamic.form.component.html"
 })
 export class DynamicFromComponent
 {
-    constructor()
-    {
+    @Input()
+    component:ComponentDto;
+    @Input()
+    form: FormGroup;
 
+    constructor() {
+        //let form = new FormControl(this.component);
+        //this.form = new FormGroup(form);
     }
-
-
 }
