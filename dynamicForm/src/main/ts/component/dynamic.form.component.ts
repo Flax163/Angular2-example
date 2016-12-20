@@ -1,20 +1,22 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
-import {ComponentDto} from "../dto/component.dto";
+import { ComponentDto } from "../dto/component.dto";
 
 @Component({
-    selector: "dynamic-from",
+    selector: "dynamic-form",
     templateUrl: "dynamic.form.component.html"
 })
-export class DynamicFromComponent
+export class DynamicFormComponent implements OnInit
 {
     @Input()
-    component:ComponentDto;
-    @Input()
+    components:ComponentDto[];
     form: FormGroup;
 
-    constructor() {
-        //let form = new FormControl(this.component);
-        //this.form = new FormGroup(form);
+    ngOnInit():void {
+        let group: any = {};
+        this.components.forEach(component => {
+            group[component.id] = new FormControl(component);
+        });
+        this.form = new FormGroup(group);
     }
 }

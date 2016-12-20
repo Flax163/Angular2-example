@@ -1,14 +1,18 @@
-import { Component } from "@angular/core";
-import {DynamicFromComponent} from "./component/dynamic.form.component";
+import { Component, OnInit } from "@angular/core";
 import {DynamicService} from "./service/dynamic.service";
+import {ComponentDto} from "./dto/component.dto";
 
 @Component({
     selector: "app-component",
-    templateUrl: "app.component.html"
+    templateUrl: "./app.component.html"
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+    components:ComponentDto[];
 
     constructor(private dynamicService:DynamicService) {
-        this.dynamicService.getComponents();
+    }
+
+    ngOnInit():void {
+        this.components = this.dynamicService.getComponents();
     }
 }
