@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+
+import { Observable } from '../../../../../../input-output/node_modules/rxjs/Observable.d';
+import '../../../../../../input-output/node_modules/rxjs/add/observable/of.d';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/delay';
+
+@Injectable()
+export class AuthService {
+    isLoggedIn: boolean = false;
+    redirectUrl: string;
+
+    login(): Observable<boolean> {
+        return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
+    }
+
+    logout(): void {
+        this.isLoggedIn = false;
+    }
+}
