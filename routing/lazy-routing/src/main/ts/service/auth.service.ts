@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from '../../../../../../input-output/node_modules/rxjs/Observable.d';
-import '../../../../../../input-output/node_modules/rxjs/add/observable/of.d';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
 
