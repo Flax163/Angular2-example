@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { ToolbarComponent } from "./toolbar/toolbar.component";
 
 const appRoutes: Routes = [
-    { path: "toolbar", component: ToolbarComponent}
+    { path: '',   redirectTo: '/library', pathMatch: 'full' },
 ];
 
 @NgModule({

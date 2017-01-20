@@ -5,9 +5,10 @@ import { BrowserModule }  from "@angular/platform-browser";
 import { AppComponent } from "./app.component.ts";
 import { AppRoutingModule } from "./app-routing.module.ts";
 import { ToolbarModule } from "./toolbar/toolbar.module";
+import {ContentModule} from "./content/content.module";
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule, ToolbarModule],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, ToolbarModule, ContentModule],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
