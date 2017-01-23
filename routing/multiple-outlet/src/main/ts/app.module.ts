@@ -8,7 +8,7 @@ import { ToolbarModule } from "./toolbar/toolbar.module";
 import {ContentModule} from "./content/content.module";
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule, ToolbarModule, ContentModule],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, ContentModule],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 })

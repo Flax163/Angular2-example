@@ -5,12 +5,8 @@ import { SimpleToolbarComponent } from "./component/simpleToolbar/simple.toolbar
 import { ToolbarComponent } from "./toolbar.component";
 
 const toolbarRoutes:Routes = [
-    {path: "toolbar", component: ToolbarComponent, outlet: 'toolbar',
-        children: [
-            {path: '', redirectTo: "simple", pathMatch: 'full'},
-            {path: 'simple', component: SimpleToolbarComponent},
-            {path: 'external', component: ExternalToolbarComponent}
-        ]}
+    {path: 'simple', component: SimpleToolbarComponent, outlet: 'toolbar'},
+    {path: 'external', component: ExternalToolbarComponent, outlet: 'toolbar'}
 ];
 
 @NgModule({
