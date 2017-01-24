@@ -7,12 +7,13 @@ import { BookDto } from "./app/dto/book.dto";
     templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-    constructor(private elementRef: ElementRef,
-                private booksService:BookService) {
+    books:BookDto[];
+
+    constructor(private booksService:BookService) {
     }
 
     ngOnInit():void {
-        console.log(this.elementRef.nativeElement.getAttribute('outerRootTest'));
-        this.booksService.books.subscribe(result => console.log('subscribe: ' + result));
+        this.booksService.loadBooks()
+            .then((books) => this.books = books);
     }
 }

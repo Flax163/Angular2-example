@@ -1,6 +1,2 @@
-<div>This book in Library</div>
-<div *ngFor="let book of booksDto">
-    {{book.name}} - {{book.description}}
-</div>
-<div>This book in ListBook</div>
-<list-book [userId]="userId" [(books)]="booksDto" (bookUpdateEvent)="handleBookUpdateEvent($event)"></list-book>
+<div>Книги в библиотеке</div>
+<list-book [(books)]="books" (bookUpdateEvent)="handleBookUpdateEvent($event)"></list-book>

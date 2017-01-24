@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { BookDto } from "../../dto/book.dto";
 
 @Component({
@@ -6,14 +6,10 @@ import { BookDto } from "../../dto/book.dto";
     templateUrl: './library.component.html'
 })
 export class LibraryComponent {
-    booksDto:BookDto[];
-    userId:number;
-
-    ngOnInit():void {
-        this.userId = 1;
-    }
+    @Input()
+    books:BookDto[];
 
     handleBookUpdateEvent(arg:string){
-        console.log("listener child complete");
+        console.log("book update");
     }
 }
