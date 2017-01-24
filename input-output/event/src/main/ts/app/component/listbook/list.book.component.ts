@@ -5,6 +5,7 @@ import { BookService } from "../../service/book.service";
 @Component({
     selector: "list-book",
     templateUrl: "list.book.component.html",
+    styleUrls: ["list.book.component.css"]
 })
 export class ListBookComponent implements OnChanges{
     @Input("books")

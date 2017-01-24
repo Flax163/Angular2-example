@@ -35,7 +35,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                include: helpers.root('src/main/resource'),
+                include: helpers.root('src/main/ts'),
                 loader: 'raw'
             }
         ]
