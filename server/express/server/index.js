@@ -10,12 +10,19 @@ var compiler = webpack(webpackDevConfig);
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: '/'}));
 app.use(webpackHotMiddleware(compiler));
 
-
-app.post('/rest/getQuery', function(req, res) {
+app.get('/rest/getQuery', function(req, res) {
     res.send({message: 'get query'});
 });
 app.post('/rest/postQuery', function(req, res) {
+    console.log(req.body);
     res.send({message: 'post query'});
+});
+app.put('/rest/putQuery', function(req, res) {
+    console.log(req.body);
+    res.send({message: 'put query'});
+});
+app.del('/rest/deleteQuery', function(req, res) {
+    res.send({message: 'del query'});
 });
 
 app.listen(9000, function () {
