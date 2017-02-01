@@ -2,10 +2,14 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 let exportRootModule = require("./default/app.module");
 
+console.log(process.env.PROJECT);
 switch (process.env.PROJECT)
 {
     case 'validation':
-        exportRootModule = require("./validation/app.module");
+        exportRootModule = require("./form/validation/app.module");
+        break;
+    case 'dynamic-form':
+        exportRootModule = require("./form/dynamic-form/app.module");
         break;
 }
 
