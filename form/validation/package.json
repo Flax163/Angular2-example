@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 9000",
+    "start:validation": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.validation.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },

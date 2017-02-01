@@ -1,8 +1,15 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { AppModule } from "./validation/app.module";
+let exportRootModule = require("./default/app.module");
+
+switch (process.env.PROJECT)
+{
+    case 'validation':
+        exportRootModule = require("./validation/app.module");
+        break;
+}
 
 if (process.env.ENV === 'production') {
     enableProdMode();
 }
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(exportRootModule.AppModule);
