@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: "detail-book",
@@ -12,9 +13,7 @@ export class DetailBookComponent implements OnInit {
 
     ngOnInit() {
         this.route.params
-            .switchMap((params: Params) => {
-                this.idBook = params['id'];
-                console.log(this.idBook);
-            });
+            .switchMap((params: Params) =>
+                this.idBook = params['id']);
     }
 }
