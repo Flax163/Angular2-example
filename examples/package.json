@@ -7,6 +7,7 @@
     "start:dynamic-form": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.dynamic-form.js",
     "start:event": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.event.js",
     "start:animation": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.animation.js",
+    "start:lazy-routing": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.lazy-routing.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
@@ -28,6 +29,7 @@
     "@types/jasmine": "^2.5.35",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.18",
+    "angular2-router-loader": "^0.3.4",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "file-loader": "^0.9.0",

@@ -17,6 +17,9 @@ switch (process.env.PROJECT)
     case 'animation':
         exportRootModule = require("./animation/app.module");
         break;
+    case 'lazy-routing':
+        exportRootModule = require("./routing/lazy-routing/app.module");
+        break;
 }
 
 if (process.env.ENV === 'production') {
