@@ -20,6 +20,12 @@ switch (process.env.PROJECT)
     case 'lazy-routing':
         exportRootModule = require("./routing/lazy-routing/app.module");
         break;
+    case 'multiple-outlet':
+        exportRootModule = require("./routing/multiple-outlet/app.module");
+        break;
+    case 'simple-routing':
+        exportRootModule = require("./routing/simple-routing/app.module");
+        break;
 }
 
 if (process.env.ENV === 'production') {
