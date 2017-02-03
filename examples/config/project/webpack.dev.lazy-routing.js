@@ -10,5 +10,11 @@ module.exports = webpackMerge(webpackDev, {
             'process.env': {
                 'PROJECT': JSON.stringify(PROJECT)
             }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            test: /\.ts$/,
+            options: {
+                loaders: ['angular2-router-loader']
+            }
         })]
 });
