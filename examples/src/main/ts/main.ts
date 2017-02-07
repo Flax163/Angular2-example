@@ -26,6 +26,9 @@ switch (process.env.PROJECT)
     case 'simple-routing':
         exportRootModule = require("./routing/simple-routing/app.module");
         break;
+    case 'rxstore':
+        exportRootModule = require("./rxstore/app.module");
+        break;
 }
 
 if (process.env.ENV === 'production') {

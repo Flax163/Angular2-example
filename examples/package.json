@@ -10,6 +10,7 @@
     "start:lazy-routing": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.lazy-routing.js",
     "start:multiple-outlet": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.multiple-outlet.js",
     "start:simple-routing": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.simple-routing.js",
+    "start:rxstore": "webpack-dev-server --inline --progress --port 9000 --config config/project/webpack.dev.rxstore.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
@@ -22,6 +23,7 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "@ngrx/store": "~2.2.1",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "zone.js": "^0.7.4"
