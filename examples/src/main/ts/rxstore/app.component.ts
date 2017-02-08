@@ -6,6 +6,7 @@ import { Action } from "@ngrx/store";
     templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+    private count:number;
 
     constructor() {
     }

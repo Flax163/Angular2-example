@@ -5,3 +5,4 @@ import '@angular/common';
 import '@angular/forms';
 
 import 'rxjs';
+import '@ngrx/store';
