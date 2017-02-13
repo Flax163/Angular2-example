@@ -1,5 +1,5 @@
 <main>
-    <input type="button" value="уменьшить счетчик"/>
+    <input (click)="test1()" type="button" value="уменьшить счетчик"/>
     <input type="button" value="увеличить счетчик"/>
-    {{count}}
+    {{ counter | async }}
 </main>

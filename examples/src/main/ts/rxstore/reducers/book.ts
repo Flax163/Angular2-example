@@ -1,5 +1,6 @@
 import { Book } from "../model/book";
 import * as book from '../actions/book';
+import {BookActionTypes} from "../actions/book";
 
 export interface BookState {
     books: Book[]
@@ -9,5 +10,10 @@ const initialState: BookState = {
 };
 
 export function bookReducer (state = initialState, action: book.BookActions) {
-    console.log(action.type);
+    switch (action.type)
+    {
+        case BookActionTypes.LOAD:
+            console.log(state);
+            break;
+    }
 }
