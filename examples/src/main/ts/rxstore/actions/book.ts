@@ -11,8 +11,12 @@ export class LoadBookAction implements Action {
     type: string = BookActionTypes.LOAD;
 }
 
+export class LoadBookCompleteAction implements Action {
+    type: string = BookActionTypes.LOAD_COMPLETE;
+}
+
 export class AddBookAction implements Action {
     type: string = BookActionTypes.ADD;
 }
 
-export type BookActions = LoadBookAction | AddBookAction;
+export type BookActions = LoadBookAction | LoadBookCompleteAction | AddBookAction;

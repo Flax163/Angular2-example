@@ -10,16 +10,12 @@ export class BookEffects
     constructor(private actions$: Actions, private bookService: BookService) { }
 
     @Effect()
-    load:Observable<Action> = this.actions$
+    $load:Observable<Action> = this.actions$
         .ofType(book.BookActionTypes.LOAD)
         .debounceTime(300)
-        .switchMap(query => {
-
-            const nextSearch$ = this.actions$.ofType(book.ActionTypes.SEARCH).skip(1);
-
-            return this.bookService.load(query)
-                .takeUntil(nextSearch$)
-                .map(books => new book.SearchCompleteAction(books))
-                .catch(() => of(new book.SearchCompleteAction([])));
+        .map((action:) => {
+            return this.bookService.load()
+                .map((books) =>
+                {new book.LoadBookCompleteAction(books)});
         });
 }
