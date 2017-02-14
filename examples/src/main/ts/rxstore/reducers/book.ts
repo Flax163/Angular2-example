@@ -12,8 +12,7 @@ const initialState: BookState = {
 export function bookReducer (state = initialState, action: book.BookActions) {
     switch (action.type)
     {
-        case BookActionTypes.LOAD:
-            console.log(state);
-            break;
+        case BookActionTypes.LOAD_COMPLETE:
+            return {books : action.payload};
     }
 }

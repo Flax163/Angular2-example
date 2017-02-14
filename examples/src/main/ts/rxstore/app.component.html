@@ -1,5 +1,7 @@
 <main>
-    <input (click)="test1()" type="button" value="уменьшить счетчик"/>
+    <input (click)="loadBooks()" type="button" value="уменьшить счетчик"/>
     <input type="button" value="увеличить счетчик"/>
-    {{ counter | async }}
+    <div *ngFor="let book of $books | async ">
+
+    </div>
 </main>

@@ -13,9 +13,9 @@ export class BookEffects
     $load:Observable<Action> = this.actions$
         .ofType(book.BookActionTypes.LOAD)
         .debounceTime(300)
-        .map((action:) => {
-            return this.bookService.load()
-                .map((books) =>
-                {new book.LoadBookCompleteAction(books)});
+        .switchMap((action)=> {
+            return this.bookService
+                .load()
+                .map((books) => new book.LoadBookCompleteAction(books))
         });
 }

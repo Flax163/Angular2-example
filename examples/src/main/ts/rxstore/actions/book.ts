@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 import { type } from "../utils";
+import { Book } from "../model/book";
 
 export const BookActionTypes = {
     LOAD:           type("BOOK load"),
@@ -9,14 +10,20 @@ export const BookActionTypes = {
 
 export class LoadBookAction implements Action {
     type: string = BookActionTypes.LOAD;
+
+    constructor(public payload?: any) {};
 }
 
 export class LoadBookCompleteAction implements Action {
     type: string = BookActionTypes.LOAD_COMPLETE;
+
+    constructor(public payload: Book[]) {};
 }
 
 export class AddBookAction implements Action {
     type: string = BookActionTypes.ADD;
+
+    constructor(public payload: Book) {};
 }
 
 export type BookActions = LoadBookAction | LoadBookCompleteAction | AddBookAction;

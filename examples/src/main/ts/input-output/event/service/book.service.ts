@@ -1,7 +1,6 @@
 import { BookDto } from "../dto/book.dto";
 
 export class BookService {
-
     public loadBooks():Promise<BookDto[]> {
         return new Promise(resolve => {
             setTimeout(() => resolve([
