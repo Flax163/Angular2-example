@@ -2,8 +2,9 @@ import { Injectable } from "@angular/core";
 import * as book from "../actions/book";
 import { Effect, Actions } from "@ngrx/effects";
 import { Observable } from "rxjs";
-import {Action} from "@ngrx/store";
-import {BookService} from "../service/book.service";
+import { Action } from "@ngrx/store";
+import { BookService } from "../service/book.service";
+
 @Injectable()
 export class BookEffects
 {

@@ -10,7 +10,7 @@ import { BookService } from "./service/book.service";
 
 @NgModule({
     imports: [BrowserModule, CoreLibraryModule,
-        StoreModule.provideStore({books: bookReducer}),
+        StoreModule.provideStore(bookReducer),
         EffectsModule.run(BookEffects)],
     declarations: [AppComponent],
     providers: [BookService],

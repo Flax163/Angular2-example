@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from "@ngrx/store";
-import { BookState } from "./reducers/book";
+import { State } from "./reducers/book";
 import { LoadBookAction } from "./actions/book";
 import { Observable } from "rxjs";
 import { Book } from "./model/book";
+import * as bookReducer from "./reducers/book";
 
 @Component({
     selector: 'app-component',
@@ -12,9 +13,8 @@ import { Book } from "./model/book";
 export class AppComponent implements OnInit {
     $books: Observable<Book[]>;
 
-    constructor(private store: Store<BookState>) {
-        this.$books = store.select('books');
-        console.log(this.$books);
+    constructor(private store: Store<State>) {
+        this.$books = store.select(bookReducer.getBooks);
     }
 
     ngOnInit():void {
