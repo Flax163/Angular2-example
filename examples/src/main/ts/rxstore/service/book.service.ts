@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Book } from "../model/book";
+import { Book } from "../../coreLibraryModule/model/book";
 
 @Injectable()
 export class BookService {

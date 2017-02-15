@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { BookDto } from "../../dto/book.dto";
+import { Book } from "../../model/book";
 
 
 @Component({
@@ -9,7 +9,5 @@ import { BookDto } from "../../dto/book.dto";
 })
 export class ListBookComponent {
     @Input("books")
-    books:BookDto[];
-
-
+    books:Book[];
 }

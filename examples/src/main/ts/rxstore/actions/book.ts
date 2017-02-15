@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 import { type } from "../utils";
-import { Book } from "../model/book";
+import { Book } from "../../coreLibraryModule/model/book";
 
 export const BookActionTypes = {
     LOAD:           type("BOOK load"),

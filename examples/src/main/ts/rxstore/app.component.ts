@@ -3,7 +3,7 @@ import { Store } from "@ngrx/store";
 import { State } from "./reducers/book";
 import { LoadBookAction } from "./actions/book";
 import { Observable } from "rxjs";
-import { Book } from "./model/book";
+import { Book } from "../coreLibraryModule/model/book";
 import * as bookReducer from "./reducers/book";
 
 @Component({
@@ -18,9 +18,6 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit():void {
-    }
-
-    loadBooks():void{
         this.store.dispatch(new LoadBookAction());
     }
 }

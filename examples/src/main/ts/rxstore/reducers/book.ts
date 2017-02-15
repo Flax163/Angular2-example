@@ -1,4 +1,4 @@
-import { Book } from "../model/book";
+import { Book } from "../../coreLibraryModule/model/book";
 import * as book from '../actions/book';
 import { BookActionTypes } from "../actions/book";
 

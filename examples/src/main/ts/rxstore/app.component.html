@@ -1,7 +1,3 @@
 <main>
-    <input (click)="loadBooks()" type="button" value="уменьшить счетчик"/>
-    <input type="button" value="увеличить счетчик"/>
-    <div *ngFor="let book of $books | async ">
-        {{book.id}}
-    </div>
+    <list-book [books]="$books | async"></list-book>
 </main>
