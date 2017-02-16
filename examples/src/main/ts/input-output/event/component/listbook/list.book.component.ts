@@ -14,7 +14,7 @@ export class ListBookComponent implements OnChanges{
     bookUpdateEvent:EventEmitter<string> = new EventEmitter<string>();
 
     ngOnChanges(changes:SimpleChanges):void {
-        if (this.books !== null) {
+        if (!this.books) {
             this.bookUpdateEvent.next("book update");
         }
     }

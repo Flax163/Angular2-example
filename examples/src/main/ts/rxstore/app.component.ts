@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from "@ngrx/store";
 import { State } from "./reducers/book";
-import { LoadBookAction } from "./actions/book";
+import { LoadBookAction, AddBookAction } from "./actions/book";
 import { Observable } from "rxjs";
 import { Book } from "../coreLibraryModule/model/book";
 import * as bookReducer from "./reducers/book";
@@ -17,7 +17,11 @@ export class AppComponent implements OnInit {
         this.$books = store.select(bookReducer.getBooks);
     }
 
-    ngOnInit():void {
+    ngOnInit(): void {
         this.store.dispatch(new LoadBookAction());
+    }
+
+    HandlerCreateNewBook(newBook: Book): void {
+        this.store.dispatch(new AddBookAction(newBook));
     }
 }

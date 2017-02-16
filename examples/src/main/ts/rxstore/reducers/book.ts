@@ -14,6 +14,8 @@ export function bookReducer (state = initialState, action: book.BookActions) {
     {
         case BookActionTypes.LOAD_COMPLETE:
             return {books : action.payload};
+        case BookActionTypes.ADD:
+            return {books : state.books.concat(action.payload)};
         default:
             return state;
     }

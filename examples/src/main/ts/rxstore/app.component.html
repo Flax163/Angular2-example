@@ -1,3 +1,4 @@
 <main>
+    <new-book (createNewBookEvent)="HandlerCreateNewBook($event)"></new-book>
     <list-book [books]="$books | async"></list-book>
 </main>
