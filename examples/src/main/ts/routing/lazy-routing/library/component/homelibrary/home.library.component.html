@@ -1,4 +1,3 @@
 <h2>Библиотека</h2>
-<a [routerLink]="['book']">Список книг</a><br>
-<a [routerLink]="['book', 1]">Книга 1</a><br>
-<a [routerLink]="['../userdashboard']">Перейти на другой компонент</a><br>
+<list-book [books]="$books | async" (clickItemBook)="handlerClickItemBook($event)"></list-book>
+<a [routerLink]="['../userdashboard']">Перейти на Dashboard</a><br>

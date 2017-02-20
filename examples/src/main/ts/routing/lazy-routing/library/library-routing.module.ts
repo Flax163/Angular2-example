@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { LibraryComponent } from "./library.component";
 import { DetailBookComponent } from "./component/detailbook/detail.book.component";
 import { HomeLibraryComponent } from "./component/homelibrary/home.library.component";
-import { ListBookComponent } from "./component/listbook/list.book.component";
+import { ListBookComponent } from "../../../coreLibraryModule/component/listbook/list.book.component";
 
 const libraryRoutes:Routes = [
     {path: '', redirectTo: 'library', pathMatch: 'full'},

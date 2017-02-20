@@ -1,3 +1,3 @@
 <ol class="rectangle">
-    <li *ngFor="let book of books"><a>{{book.name}} - {{book.description}}</a></li>
+    <book-item (clickBook)="handlerClickBook($event)" [book]="book" *ngFor="let book of books"></book-item>
 </ol>

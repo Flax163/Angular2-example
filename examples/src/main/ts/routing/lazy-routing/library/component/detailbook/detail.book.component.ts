@@ -7,13 +7,13 @@ import 'rxjs/add/operator/switchMap';
     templateUrl: "detail.book.component.html"
 })
 export class DetailBookComponent implements OnInit {
-    idBook:number;
+    idBook:string;
 
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit() {
-        this.route.params
-            .switchMap((params: Params) =>
-                this.idBook = params['id']);
+        this.route.params.subscribe((params: Params) => {
+            this.idBook = params['id']
+        });
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "angular2-form-validation",
+  "name": "angular2-example",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 9000",

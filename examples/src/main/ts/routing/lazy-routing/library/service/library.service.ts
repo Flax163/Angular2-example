@@ -1,9 +1,14 @@
 import { Injectable } from "@angular/core";
-import {Book} from "../model/book";
+import { Book } from "../../../../coreLibraryModule/model/book";
 
 @Injectable()
 export class LibraryService {
     loadBooks():Promise<Book[]>{
-        return Promise.resolve([new Book(1, "book1"), new Book(2, "book2")])
+        return Promise.resolve([
+            {id: "1", name: "book1", description: "description1"},
+            {id: "2", name: "book2", description: "description2"},
+            {id: "3", name: "book3", description: "description3"},
+            {id: "4", name: "book4", description: "description4"},
+        ])
     }
 }
