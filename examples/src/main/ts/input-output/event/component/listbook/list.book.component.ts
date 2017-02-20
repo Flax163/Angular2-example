@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from "@angular/core";
 import { BookDto } from "../../dto/book.dto";
-import { BookService } from "../../service/book.service";
 
 @Component({
     selector: "list-book",
